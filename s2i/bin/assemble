@@ -22,8 +22,11 @@ fi
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
+echo "---> Pulling application dependencies..."
+go get
+
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
-go build -o web web.go
+go build -o app
 
 echo "---> Build completed !"

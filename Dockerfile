@@ -19,6 +19,9 @@ LABEL maintainer="Yoël Cornamusaz <yoel.cornamusaz@gmail.com>"
 RUN curl -O https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz 
 RUN tar -C /usr/local -xzf go*.tar.gz
 ENV PATH="/usr/local/go/bin:${PATH}"
+RUN mkdir "/opt/app-root/go"
+ENV GOPATH="/opt/app-root/go" 
+ENV GOBIN=$GOPATH/bin
 
 # TODO (optional): Copy the builder files into /opt/app-root
 COPY ./ /opt/app-root/src
