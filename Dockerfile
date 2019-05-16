@@ -18,7 +18,7 @@ LABEL maintainer="Yoël Cornamusaz <yoel.cornamusaz@gmail.com>"
 #RUN yum install -y rubygems && yum clean all -y
 RUN curl -O https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz 
 RUN tar -C /usr/local -xzf go*.tar.gz
-RUN export PATH=$PATH:
+ENV PATH="/usr/local/go/bin:${PATH}"
 
 # TODO (optional): Copy the builder files into /opt/app-root
 COPY ./ /opt/app-root/src

@@ -24,8 +24,6 @@ cp -Rf /tmp/src/. ./
 
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
-mkdir output
-export PATH=$PATH:/usr/local/go/bin
-go build -o output/web web.go
+go build -o web web.go
 
 echo "---> Build completed !"
