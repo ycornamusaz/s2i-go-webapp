@@ -1,4 +1,4 @@
-IMAGE_NAME = golang
+IMAGE_NAME = golang-builder
 
 .PHONY: build
 build:

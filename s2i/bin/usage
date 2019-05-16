@@ -1,11 +1,11 @@
 #!/bin/bash -e
 cat <<EOF
-This is the golang S2I image:
+This is the golang-builder S2I image:
 To use it, install S2I: https://github.com/openshift/source-to-image
 
 Sample invocation:
 
-s2i build <source code path/URL> golang <application image>
+s2i build <source code path/URL> golang-builder <application image>
 
 You can then run the resulting image via:
 docker run <application image>
